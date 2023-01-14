@@ -10,6 +10,13 @@
     <form>
       <label for="currency">Enter Amount In USD</label>
       <input id="currency" type="text" name="currency" placeholder="Enter Amount In USD">
+      <select name="userSelect" id="selection">
+      <option value="EUR">Euro</option>
+      <option value="JPY">Japanese Yen</option>
+      <option value="AUD">Australian Dollar</option>
+      <option value="CAD">Canadian Dollar</option>
+      <option value="CHF">Swiss Franc</option>
+    </select>
       <button type="submit" class="btn-success" id="currencyRates">Get Current Conversion Rates</button>
     </form>
     <p id="showResponse"></p>
