@@ -24,7 +24,7 @@ function printElements(data) {
 }
 
 function printError(error) {
-  document.querySelector('#showResponse').innerText = `There was an error accessing the currency data for ${error[2]}: ${error[0].status} ${error[0].statusText}: ${error[1].message}`;
+  document.querySelector('#showResponse').innerText = `There was an error accessing the currency data for ${error[2]}: ${error[0].status} ${error[0].statusText}: ${error[1][`error-type`]}`;
 }
 
 function handleFormSubmission(event) {
