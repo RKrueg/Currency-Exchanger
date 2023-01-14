@@ -1,0 +1,57 @@
+nav {
+  display: flex;
+  align-items: center;
+  background-color: grey;
+  margin-bottom: 2em;
+}
+
+.moneyImage {
+  width: 10em;
+}
+
+.to-right {
+  margin-left: auto;
+}
+
+.nav-link {
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration:underline;
+  padding: .5em;
+  color: rgb(210, 205, 205);
+  font-size: 1rem;
+}
+
+.btn-success {
+    background-color: black;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+#showResponse {
+text-align: center;
+size: 2em;
+padding: 2em;
+}
+
+.container {
+  text-align: center;
+  background-color: rgb(181, 179, 179);
+  font-size: 15px;
+  padding: 3em 3em;
+  width: 90vw;
+  max-width: 30em;
+  position: absolute;
+  transform: translatex(-50%);
+  left: 50%;
+  top: 5em;
+  border-radius: 1em;
+  box-shadow: .3em .3em black;
+}
