@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
   <title>Conversion Exchanger</title>
 </head>
+
 <body>
+  <nav>
+    <a href="index.html"><img class="moneyImage" src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Reserve_currencies_symbols_4.svg"></a>
+    <a href="" class="to-right nav-link">Currency Facts</a>
+    <a href="" class="nav-link">About Us</a>
+  </nav>
   <div class="container">
-    <h1>Get Currency Conversion Rates For 161 Currencies! </h1>
-    <p>To get the current conversion rate for a particular currency, please enter an amount in USD.</p>
+    <h1>Currency Exchanger! </h1>
+    <p>How much is my USD worth in other currencies?</p>
     <form>
       <label for="currency">Enter Amount In USD</label>
       <input id="currency" type="text" name="currency" placeholder="Enter Amount In USD">
+      <label for="selectingCurrency">Select Currency To Convert To</label>
       <select name="userSelect" id="selection">
-      <option value="EUR">Euro</option>
-      <option value="JPY">Japanese Yen</option>
-      <option value="AUD">Australian Dollar</option>
-      <option value="CAD">Canadian Dollar</option>
-      <option value="CHF">Swiss Franc</option>
-    </select>
+        <option value="EUR">Euro</option>
+        <option value="JPY">Japanese Yen</option>
+        <option value="AUD">Australian Dollar</option>
+        <option value="CAD">Canadian Dollar</option>
+        <option value="CHF">Swiss Franc</option>
+      </select>
       <button type="submit" class="btn-success" id="currencyRates">Get Current Conversion Rates</button>
     </form>
     <p id="showResponse"></p>
   </div>
 </body>
+
 </html>
