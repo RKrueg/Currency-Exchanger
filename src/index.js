@@ -7,9 +7,9 @@ import ConversionService from './conversion-service';
 
 function getCurrency(userAmount) {
   let promise = ConversionService.getCurrency(userAmount);
-  promise.then(function(currencyDataArray) {
+  promise.then(function (currencyDataArray) {
     printElements(currencyDataArray);
-  }, function(errorArray) {
+  }, function (errorArray) {
     console.log(errorArray);
     printError(errorArray);
   });
@@ -19,8 +19,13 @@ function getCurrency(userAmount) {
 
 function printElements(data) {
   let userSelection = document.querySelector("#selection").value;
-  const calcAmount = data[1] * data[0].conversion_rates[userSelection];
-  document.querySelector('#showResponse').innerText = `The converted amount from ${data[1]} USD is equal to ${calcAmount} ${userSelection}`;
+  let selection = data[0].conversion_rates[userSelection];
+  if (isNaN(selection)) {
+    document.querySelector('#showResponse').innerText = `The currency in question doesn't exist. Please try again!`;
+  } else {
+    const calcAmount = data[1] * data[0].conversion_rates[userSelection];
+    document.querySelector('#showResponse').innerText = `${data[1]} USD is equal to ${calcAmount} ${userSelection}`;
+  }
 }
 
 function printError(error) {
@@ -34,6 +39,6 @@ function handleFormSubmission(event) {
   getCurrency(userAmount);
 }
 
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
   document.querySelector('form').addEventListener("submit", handleFormSubmission);
 });
