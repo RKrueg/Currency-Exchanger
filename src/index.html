@@ -7,7 +7,8 @@
 
 <body>
   <nav>
-    <a href="index.html"><img class="moneyImage" src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Reserve_currencies_symbols_4.svg"></a>
+    <a href="index.html"><img class="moneyImage"
+        src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Reserve_currencies_symbols_4.svg"></a>
     <a href="" class="to-right nav-link">Currency Facts</a>
     <a href="" class="nav-link">About Us</a>
   </nav>
@@ -17,18 +18,15 @@
     <form>
       <label for="currency">Enter Amount In USD</label>
       <input id="currency" type="text" name="currency" placeholder="Enter Amount In USD">
-      <label for="selectingCurrency">Select Currency To Convert To</label>
-      <select name="userSelect" id="selection">
-        <option value="EUR">Euro</option>
-        <option value="JPY">Japanese Yen</option>
-        <option value="AUD">Australian Dollar</option>
-        <option value="CAD">Canadian Dollar</option>
-        <option value="CHF">Swiss Franc</option>
-      </select>
+      <label for="selectingCurrency">Enter Currency Abbreviation To Convert To</label>
+      <pre> Examples: USD, JPY, or EUR</pre>
+      <input id="selection" type="text" placeholder="Currency Abbreviation">
       <button type="submit" class="btn-success" id="currencyRates">Get Current Conversion Rates</button>
     </form>
     <p id="showResponse"></p>
   </div>
+  <img class="currencyImage" src="https://www.forexfactory.com/attachment/image/3481739?d=1572929024"
+    alt="Image of different currencies in the world!">
 </body>
 
 </html>
