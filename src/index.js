@@ -18,7 +18,8 @@ function getCurrency(userAmount) {
 // UI Logic
 
 function printElements(data) {
-  let userSelection = document.querySelector("#selection").value;
+  let userValue = document.querySelector("#selection").value;
+  let userSelection = userValue.toUpperCase();
   let selection = data[0].conversion_rates[userSelection];
   if (isNaN(selection)) {
     document.querySelector('#showResponse').innerText = `The currency in question doesn't exist. Please try again!`;
